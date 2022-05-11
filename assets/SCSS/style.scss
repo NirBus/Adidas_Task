@@ -8,12 +8,10 @@ body {
     height: 180vh;
 }
 
-header {
-    height: 36vh;
-}
 
 .container {
-    margin: 0 145px;
+    margin: 0 119.6px;
+    padding: 40px 15px 60px;
 }
 
 .navbar {
@@ -141,6 +139,7 @@ header {
     border: none;
     border: solid thin #e9ecef;
     background-color: #e9ecef;
+    transition: 2s;
 }
 
 .navbar-search a:link {
@@ -163,50 +162,58 @@ header {
     visibility: hidden;
 }
 
+//Navbar-End
 
 .bg-img {
     width: 100%;
     height: 831px;
-    background-image: url("https://brand.assets.adidas.com/image/upload/f_auto,q_auto,fl_lossy/if_w_gt_1920,w_1920/enUS/Images/ss22-pride-launch-hp-masthead2-d_tcm221-883710.jpg");
+    background-image: url("../Image/orig-ss22-stansmith-PC.jpg");
     background-size: 100%;
     background-repeat: no-repeat;
+    object-fit: cover;
+    display: block;
+}
+
+.mainn{
+    display: flex;
+    box-sizing: border-box;
+    flex-direction: row;
+    height: 500px;
 }
 
 .main-text {
-    padding-top: 105px;
-    box-sizing: border-box;
-}
-
-.main-title {
-    color: white;
-    font-family: "AdihausDIN", Helvetica, Arial, sans-serif;
+    width: 35%;
+    box-sizing:border-box;
     display: flex;
-    align-items: center;
-    box-sizing: border-box;
-    margin: 0 0 10px;
+    flex-direction: column;
+    justify-content: center;
+}
+.main-title {
+    font-family: "AdihausDIN", Helvetica, Arial, sans-serif;
     font-size: 42px;
+    margin: 0 0 10px;
+    letter-spacing: -2px;
 }
 
-.white {
-    color: white;
-}
-
-.main-text-2 {
-    width: 25%;
+.main-title-2 {
     font-size: 19px;
 }
 
-.btn {
+.btn,.btn-2 {
     margin: 15px 0;
-    display: flex;
-    justify-content: flex-start;
     position: relative;
     z-index: 0;
-
 }
 
-main .container .main-text .btn button:hover {
-    color: rgba(0, 0, 0, 0.6);
+.btn button,.btn-2 button{
+    color: white;
+    background-color:black;
+    letter-spacing: 2px;
+    font-weight:550;
+}
+
+main .container .main-text .btn button:hover,.btn-2 button:hover {
+    color: #6f6d65;
 }
 
 main .container .main-text .btn button .arrow-ico {
@@ -215,19 +222,28 @@ main .container .main-text .btn button .arrow-ico {
 
 .btn-fog {
     height: 50px;
-    width: 140px;
-    border: 1.5px solid white;
-    position: absolute;
+    width: 186px;
+    border: 1.5px solid;
+    position: relative;
     left: 3.5px;
-    top: 2.3px;
+    top: 3px;
+    z-index: 1;
+}
+.btn-fog-2 {
+    height: 50.5px;
+    width: 146px;
+    border: 1.5px solid;
+    position: relative;
+    left: 3.5px;
+    top: 3px;
     z-index: 1;
 }
 
 button {
-    font-weight: bolder;
+    font-family: "AdihausDIN", Helvetica, Arial, sans-serif;
     padding: 0 15px;
     height: 50px;
-    position: relative;
+    position: absolute;
     z-index: 2;
     background-clip: padding-box;
     cursor: pointer;
@@ -263,6 +279,20 @@ button {
 }
 
 
+.pg2-text-1{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.pg2-text-1 h2{
+    font-size: 40px;
+    margin: 0 0 15px;
+    font-family: "AdihausDIN", Helvetica, Arial, sans-serif;
+    font-style:italic;
+}
+
+//Mobile Version-1
 @media screen and (max-width: 700px) {
 
     .navbar-up {
@@ -311,7 +341,9 @@ button {
     }
 
 }
+//Mobile-End
 
+// Mobile Version-2
 @media screen and (max-width: 700px) {
     .navbar-middle-text {
         height: 0px;
@@ -338,13 +370,18 @@ button {
         background-color: white;
     }
 
-    .navbar-bottom .navbar-search .input-custm {
-        padding: 0px;
-        height: 0px;
+
+    .navbar-search input {
+        padding: none;
+        height: none;
         border: none;
         border: none;
         background-color: none;
+        transition: none;
+        visibility: hidden;
     }
+
+
 
     .navbar-bottom-text ul {
         display: none;
@@ -414,34 +451,42 @@ button {
     }
 
     .bg-img {
-        background-image: url("https://brand.assets.adidas.com/image/upload/f_auto,q_auto,fl_lossy/if_w_gt_1920,w_1920/enUS/Images/ss22-pride-launch-hp-masthead2-d_tcm221-883710.jpg");
-        background-size: cover;
+        background-image: url("../Image/orig-ss22-stansmith-mobile.jpg");
+        object-fit: cover;
         background-repeat: no-repeat;
-        background-position: center center;
+        max-height: 100vh;
+        display: block;
     }
 
-    .main-text {
-        padding-top: 50px;
-        box-sizing: border-box;
-    }
-
-.main-title {
-    color: white;
-    font-family: "AdihausDIN", Helvetica, Arial, sans-serif;
-    display: flex;
-    align-items: center;
-    box-sizing: border-box;
-    margin: 0 0 10px;
-    font-size: 42px;
-}
 
 .container {
-    margin: 0 20px;
+    margin: 0;
+    padding: 20px 15px 15px;
 }
 
-.main-text-2 {
-    width: 55%;
-    font-size: 19px;
+
+.mainn{
+    display: flex;
+    flex-direction: row;
+    height: 432px;
 }
 
+.main-text {
+    width: 100%;
+    box-sizing:border-box;
+    display: flex;
+    justify-content: end;
 }
+.main-title {
+    font-family: "AdihausDIN", Helvetica, Arial, sans-serif;
+    font-size: 36px;
+}
+
+
+
+
+}
+//Mobile Version end
+
+
+
